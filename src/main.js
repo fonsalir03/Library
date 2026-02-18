@@ -33,6 +33,34 @@ const read_status_button = document.querySelector(".read-status-button");
 //refrence to index of current book
 let book_index = 0;
 
+function modifyInputErrorMsg(){
+    const authorInput = document.querySelector("input[name='author']");
+    const titleInput = document.querySelector("input[name='title']");
+    const pageNumInput = document.querySelector("input[name='page_count']")
+
+    if(authorInput.validity.valueMissing){
+        authorInput.setCustomValidity("Please enter a name")
+    }else{
+        authorInput.setCustomValidity("")
+    }
+
+    if(titleInput.validity.valueMissing){
+        titleInput.setCustomValidity("Please enter a book title") 
+    }else{
+        titleInput.setCustomValidity("")
+    }
+
+    if(pageNumInput.validity.valueMissing  ){
+        pageNumInput.setCustomValidity("Can you enter a number?")
+    }else{
+        pageNumInput.setCustomValidity("")
+    }
+}
+
+modal_submit_elem.addEventListener("click", function(){
+    modifyInputErrorMsg();
+})
+
 function Book(BookAuthor, BookTitle, BookPageCount, BookReadStatus) {
     this.author = BookAuthor;
     this.title = BookTitle;
