@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="library-container">
+            <dialog class="book-modal">
+                <form method="dialog">
+                    <input type="text" name="author" placeholder="Author" required>
+                    <input type="text" name="title" placeholder="Title" required>
+                    <input type="number" name="page_count" placeholder="Number of Pages" required>
+                    <div class="read-status-modal-container">
+                        <legend>Have you read this book?</legend>
+                        <input type="checkbox"name="read_status">
+                    </div>
+                    <button class="book-modal-submit" type="submit">OK</button>
+                    <button class="book-modal-cancel" type="submit">CANCEL</button>
+                    
+                </form>
+            </dialog>
+
+            <div class="book-info">
+                <div data-index="" class="book-author">Author</div>
+                <div class="book-title">Title</div>
+                <div class="book-page-count">Page Count</div>
+                <div class="book-read-status"><button class="book-read-status-default read-status-button">Read?</button></div>
+            </div>
+        <div class="book-buttons">
+            <div class="book-arrow">
+                <div class="book-button-prev">
+                    <button><p>PREV</p></button>
+                </div>
+                <div class="book-button-next">
+                    <button><p>NEXT</p></button>
+                </div>
+            </div>
+            <div class="book-bottom-buttons">
+            <div class="book-delete"><button><p>DEL</p></button></div>
+            <div class="book-add"><button><p>ADD</p></button></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
